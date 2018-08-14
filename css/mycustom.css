@@ -1,0 +1,105 @@
+@font-face {
+	font-family: MyFont;
+	src: url(../font/HelveticaNeue.otf);
+}
+
+body{
+	font-family: MyFont;
+	background:#26262A;
+}
+
+a{
+	cursor: pointer;
+}
+
+.col-menu{
+	position: fixed;
+	right: 0;
+	height: 100%;
+	background-color: rgba(224, 224, 235, 0.3);
+	z-index: 100;
+}
+
+.col-menu .profile-picture{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.col-menu .profile-picture img{
+	max-width: 150px;
+	border-radius: 50%;
+}
+
+.col-menu ul{
+	list-style-type: none;
+	margin-top: 20px;
+}
+
+
+.col-menu li{
+	padding: 10px 0;
+	font-size: 20px;	
+}
+
+.col-menu li a{
+	color: #fff;
+}
+
+.main{
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.main .cover-img{
+	position: relative;
+}
+
+.main .cover-img video{
+	width: 100%;
+}
+
+.main .cover-img .blur{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+	background: rgba(166, 166, 166, 0.6);
+}
+
+.main .quote{
+	background: #EDEEEF;
+	text-align: center;
+	padding: 150px 0;
+}
+
+.blockquote{
+	font-size: 30px;
+}
+
+.blockquote span{
+	padding-left: 40%;
+}
+
+.blockquote-footer{
+	text-align: right;
+	padding-right: 20%;
+}
+
+.main .project-list{
+	display: inline-block;
+	width: 100%;
+}
+
+figure.effect-moses p{
+	text-align: center !important;
+	font-family: Raleway, Arial, sans-serif;
+}
+
+figure.effect-moses p a{
+	color: white;
+	padding: 5px 10px;
+	border: 1px solid #fff;
+	font-size: 25px;
+}
