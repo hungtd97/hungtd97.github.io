@@ -29,23 +29,16 @@ a{
 
 .col-menu .profile-picture p{
 	font-size: 25px;
-	font-family: 'Bowlby One SC', cursive;	
+	font-family: MyFont;	
     text-align: center;
     font-weight: bold;
     background: linear-gradient(
         60deg,
-        rgb(223, 32, 32) 10%,
-        rgb(223, 96, 32) 10%,
-        rgb(223, 96, 32) 25%,
-        rgb(223, 191, 32) 25%,
-        rgb(223, 191, 32) 40%,
-        rgb(32, 223, 64) 40%,
-        rgb(32, 223, 64) 55%,
-        rgb(32, 159, 223) 55%,
-        rgb(32, 159, 223) 70%,
-        rgb(96, 32, 223) 70%,
-        rgb(96, 32, 223) 85%,
-        rgb(223, 32, 32) 85%
+        rgb(230, 230, 230) 10%,
+       rgb(217, 217, 217) 25%,
+        rgb(204, 204, 204) 50%,
+        rgb(166, 166, 166) 75%,
+        rgb(140, 140, 140) 90%
     );
     color: #fff;
     -webkit-background-clip: text;
@@ -249,14 +242,18 @@ a{
 .main .project-list{
 	display: inline-block;
 	width: 100%;
+	background-image: url("../img/bg-project.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
-.main .project-list p{
+.main .project-list p.title{
 	font-size: 50px;
 	text-align: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
 	color: #fff;
+	text-transform: uppercase;
 }
 
 figure.effect-moses p{
