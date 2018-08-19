@@ -31,7 +31,7 @@ a{
 	margin-top: 20px;
 }
 
-.col-menu .profile-picture p{
+.col-menu .profile-picture p.name{
 	font-size: 25px;
 	font-family: MyFont;	
     text-align: center;
@@ -288,6 +288,7 @@ figcaption h2{
 
 .contact{
 	padding-bottom: 200px;
+	text-align: center;
 }
 
 .contact p.title{
@@ -352,3 +353,10 @@ figcaption h2{
 .contact .text.hidden li.ghost {
   opacity: 0;
   max-width: 0;
+
+}
+
+.contact a{
+	color: #fff;
+	font-size: 40px;
+}
