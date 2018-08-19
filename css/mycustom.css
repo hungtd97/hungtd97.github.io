@@ -3,6 +3,8 @@
 	src: url(../font/HelveticaNeue.otf);
 }
 
+@import url(https://fonts.googleapis.com/css?family=Dosis:300,400);
+
 body{
 	font-family: MyFont;
 	background:#26262A;
@@ -25,6 +27,41 @@ a{
 	margin-top: 20px;
 }
 
+.col-menu .profile-picture p{
+	font-size: 25px;
+	font-family: 'Bowlby One SC', cursive;	
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(
+        60deg,
+        rgb(223, 32, 32) 10%,
+        rgb(223, 96, 32) 10%,
+        rgb(223, 96, 32) 25%,
+        rgb(223, 191, 32) 25%,
+        rgb(223, 191, 32) 40%,
+        rgb(32, 223, 64) 40%,
+        rgb(32, 223, 64) 55%,
+        rgb(32, 159, 223) 55%,
+        rgb(32, 159, 223) 70%,
+        rgb(96, 32, 223) 70%,
+        rgb(96, 32, 223) 85%,
+        rgb(223, 32, 32) 85%
+    );
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 25s BeProud linear infinite,
+    3s Always ease alternate infinite;
+}
+
+@keyframes BeProud {
+    100% { background-position: 100vw 0px; }
+}
+
+@keyframes Always {
+    100% { transform: scale(1.1);}
+}
+
 .col-menu .profile-picture img{
 	max-width: 150px;
 	border-radius: 50%;
@@ -41,8 +78,52 @@ a{
 	font-size: 20px;	
 }
 
+.progress{
+  transform: rotate(-90deg);
+  position: absolute;
+  width: 100%;
+  left: 0;
+} 
+
 .col-menu li a{
 	color: #fff;
+	font-size: 22px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-family: 'Dosis', sans-serif;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.col-menu li a.effect-underline:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.col-menu li a.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 
 .main{
@@ -52,6 +133,84 @@ a{
 
 .main .cover-img{
 	position: relative;
+	background-image: url("../img/top_page.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 700px;
+}
+
+.main .cover-img p{
+	text-align: center;
+    padding-top: 180px;
+    font-size: 50px;
+}
+
+
+.text-top-page{
+	padding-top: 200px;
+	color: #fff;
+	position: relative;
+  	display: flex;
+     padding-left: 100px;
+}
+
+
+.text-top-page h1 { 
+	font-size: 70px;
+	margin: 0; 
+	text-align: center;
+}	
+
+.marker {
+      position: absolute;
+    top: 196px;
+    left: 105px;
+    height: 5px;
+    width: 42px;
+  background-color: rgb(235,235,235);
+  animation-name: marker;
+}
+
+.marker, .r, .e1, .s1, .s2, .e2 {
+  animation-timing-function: cubic-bezier(0.15,-0.01, 0.58, 1);
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.r { margin-left: 1rem;   animation-name: r; }
+.e1 { margin-left: 7rem; animation-name: e1; }
+.s1 { margin-left: 16rem; animation-name: s1; }
+.s2 { margin-left: 21rem; animation-name: s2; }
+.e2 { margin: 0 36rem 0 42rem; animation-name: e2; }
+
+@keyframes r { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(25px); }
+}
+@keyframes e1 { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(50px); }
+}
+@keyframes s1 { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(75px); }
+}
+@keyframes s2 { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(100px); }
+}
+@keyframes e2 { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(125px); }
+}
+@keyframes marker { 
+  0%, 20% { transform: translateX(0); }
+  50%, 70% { transform: translateX(315px); }
+}
+
+.main .cover-img img{
+	width: 100%
 }
 
 .main .cover-img video{
@@ -90,6 +249,14 @@ a{
 .main .project-list{
 	display: inline-block;
 	width: 100%;
+}
+
+.main .project-list p{
+	font-size: 50px;
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: #fff;
 }
 
 figure.effect-moses p{
