@@ -2,6 +2,10 @@
 	font-family: MyFont;
 	src: url(../font/HelveticaNeue.otf);
 }
+@font-face {
+	font-family: MyFontBold;
+	src: url(../font/HelveticaNeue-Bold.otf);
+}
 
 @import url(https://fonts.googleapis.com/css?family=Dosis:300,400);
 
@@ -63,12 +67,13 @@ a{
 .col-menu ul{
 	list-style-type: none;
 	margin-top: 20px;
+	transition: all 3s;
 }
 
 
 .col-menu li{
 	padding: 10px 0;
-	font-size: 20px;	
+	font-size: 20px;
 }
 
 .progress{
@@ -117,6 +122,12 @@ a{
   opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
+}
+
+.fa-angle-left{
+	font-size: 25px;
+	padding-right: 10px;
+	color: #fff;
 }
 
 .main{
@@ -245,6 +256,7 @@ a{
 	background-image: url("../img/bg-project.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
+	padding-bottom: 50px;
 }
 
 .main .project-list p.title{
@@ -254,6 +266,7 @@ a{
 	margin-bottom: 40px;
 	color: #fff;
 	text-transform: uppercase;
+	font-family: MyFontBold
 }
 
 figure.effect-moses p{
@@ -267,3 +280,75 @@ figure.effect-moses p a{
 	border: 1px solid #fff;
 	font-size: 25px;
 }
+
+
+figcaption h2{
+	color: #ff884d;
+}
+
+.contact{
+	padding-bottom: 200px;
+}
+
+.contact p.title{
+	font-size: 50px;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 40px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: MyFontBold;
+}
+
+.contact p .text-1{
+  	transition-duration: 5s;
+  	transition: all 0.5s ease-in-out;
+}
+
+.contact p .text-2{
+	display: none;
+  	transition-duration: 5s;
+  	transition: all 0.5s ease-in-out;
+}
+
+.contact p .text-1.hide{
+	transform: translateX(1000px);
+}
+
+.contact p .text-2.hide{
+	display: inline !important;
+}
+
+.contact .text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.contact .text.hidden {
+  border-bottom: 1px solid #fff;
+}
+
+.contact .text li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.contact .text.hidden li.spaced {
+  padding-left: 0;
+}
+.contact .text li.spaced {
+  padding-left: 0.5em;
+}
+
+.contact .text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;

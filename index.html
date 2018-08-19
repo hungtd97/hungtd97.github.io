@@ -9,9 +9,10 @@
 	<link rel="stylesheet" href="css/set1.css">
 	<link rel="stylesheet" href="css/set2.css">
 	<script src="js/jquery.min.js"></script>
-	<script src="js/mycustom.js"></script>
-	<script src="js/lazyload.min.js"></script>
+	<script src="js/lazyload.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mycustom.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -22,13 +23,14 @@
 			</div>
 			<div>
 				<ul class="menu-link">
-					<li><a class="effect-underline">Timeline</a></li>
-					<li><a class="effect-underline" onclick="goToByScroll('project-box');">Project</a></li>
+					<li id="top-link"><i class="fa fa-angle-left"></i><a class="effect-underline" onclick="goToByScroll('top-page');">Timeline</a></li>
+					<li id="project-link"><i class="fa fa-angle-left"></i><a class="effect-underline" onclick="goToByScroll('project-box');">Project</a></li>
+					<li id="contact-link"><i class="fa fa-angle-left"></i><a class="effect-underline" onclick="goToByScroll('contact-box');">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="col-sm-10 main">
-			<div class="cover-img">
+			<div class="cover-img" id="top-page">
 				<div class="text-top-page">
 					<div class="marker"></div>
 					<h1>H</h1>
@@ -52,12 +54,19 @@
 					<figure class="effect-apollo">
 						<img src="img/Project-1.PNG" alt="img09">
 						<figcaption>
-							<h2>Landing page</h2>
+							<!-- <h2>Landing page</h2> -->
 							<p>Landingpage for FUNiX</p>
 							<a href="https://hungtd97.github.io/ldp/" target="_blank">View more</a>
 						</figcaption>			
 					</figure>
 				</div>
+			</div>
+			<div class="contact" id="contact-box">
+				<p class="title"><span class="text-1">Contact</span><span class="text-2">Let's have a chat</span></p>
+				<div class="text">
+					
+				</div>
+				<a href="https://goo.gl/ZkGj5K" target="_blank">as</a>
 			</div>
 		</div>
 
