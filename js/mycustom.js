@@ -1,18 +1,21 @@
 var sharingan = new Audio();
 sharingan.src = "sound/Sharingan.mp3";
-clearCurrentLink();
-$(".mb-0").lazyload({
-	effect : "fadeIn"
-});	
+clearCurrentLink();	
 $(function(){
 	$(window).scroll(function() {
 		project = $('#project-box').offset().top - $(window).height() / 2 ;
 		contact = $('#contact-box').offset().top - $(window).height() / 2 ;
+		quote = $('#quote-box').offset().top - $(window).height() / 2 ;
 		current = $(window).scrollTop();
 		if(current >= 0 && current < project){
 			if(checkCurrentLink('top-link') === false){
 				clearCurrentLink();
 				$('#top-link').find('i').css('display','inline');
+			}
+			if(current > quote){
+				$('.quote-block').fadeIn(300, function(){
+					$(this).css('display', 'inline');
+				});
 			}
 		}else if (current > project && current < contact){
 			if(checkCurrentLink('project-link') === false){
