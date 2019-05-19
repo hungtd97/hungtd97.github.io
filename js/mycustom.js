@@ -2,6 +2,8 @@ var sharingan = new Audio();
 sharingan.src = "sound/Sharingan.mp3";
 clearCurrentLink();	
 $(function(){
+
+	move()
 	$(window).scroll(function() {
 		project = $('#project-box').offset().top - $(window).height() / 2 ;
 		contact = $('#contact-box').offset().top - $(window).height() / 2 ;
@@ -35,6 +37,19 @@ $(function(){
 
 function setCurrentLink(){
 
+}
+
+function move() {
+    var elem = document.getElementById("progress"); 
+    var width = 1;
+    // var id = setInterval(frame, 10);
+    var value = $('#skin').val()
+    const totalChampion = 143
+    let percent = value / totalChampion * 100
+    console.log('percent' + percent, {color: 'red'})
+    // function frame() {
+        elem.style.width = percent + '%'; 
+    // }
 }
 
 function clearCurrentLink(){

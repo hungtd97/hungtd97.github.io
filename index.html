@@ -12,6 +12,7 @@
 	<script src="js/lazyload.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/ScrollMagic.min.js"></script>
+	<!-- <script src="js/progressbar.min.js"></script> -->
 	<script src="js/mycustom.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -51,6 +52,13 @@
 					<footer class="blockquote-footer">Tao Thao</footer>
 				</blockquote>
 			</div>
+			</div>
+			<div style="height: 500px; width: 100%; padding: 30px 30px; text-align: center;">
+				<div>
+					<label style="color: white">Số skin: (tổng champions: 143) </label>
+					<input id='skin' type="text" onchange="move()" value="68" style="text-align: center" />
+				</div>
+				 <div class="progress-bar" id="progress">68/143</div>
 			</div>
 			<div class="project-list" id="project-box">
 				<p class="title">My Project</p>
